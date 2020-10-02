@@ -34,8 +34,11 @@ client.on('message', message => {
             const randomName = `${gods[Math.floor(Math.random() * gods.length)]} of ${countries[Math.floor(Math.random() * countries.length)]}`;
             message.channel.send(`doth thou like the name: ${randomName}?`);
             break;
+        case 'maxims':
+            message.channel.send(`know thyself.\nNothing to excess.\nSurety brings ruin.`);
+            break;
         case 'help':
-            message.channel.send(`commands:\n \`\`\`name-me [god] [place] \nrandom-name\`\`\``);
+            message.channel.send(`I :heart: Apollo\n commands:\n \`\`\`name-me [god] [place] \nrandom-name\nmaxims\`\`\``);
             break;
         default:
             message.channel.send(`Dear ${message.author}, you pose the wrong question. ask for !oracle help`);
